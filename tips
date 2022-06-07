@@ -1,0 +1,64 @@
+//tasks
+{
+  "tasks": [
+      {
+          "type": "shell",
+          "label": "Build ",
+          "command": "make",
+          "options": 
+          {
+              "cwd": "${workspaceFolder}"
+          },
+          "problemMatcher": 
+          [
+              "$gcc"
+          ],
+          "group": 
+          {
+              "kind": "build",
+              "isDefault": true
+          }
+      },
+      {
+          "type": "shell",
+          "label": "Clean",
+          "command": "make  clean",
+          "options": {
+              "cwd": "${workspaceFolder}"
+          },
+          "group": "build"
+      },
+    
+  ],
+  "version": "2.0.0"
+}
+
+
+{
+    "version": "0.2.0",
+    "configurations": [
+    {
+      "name": "(Linux) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/so_long",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+  },
+  {
+      "name": "(macOS) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/so_long",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+  }
+  
+]
+}

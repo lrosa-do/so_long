@@ -1,0 +1,54 @@
+{
+  "tasks": 
+  [
+      {
+          "type": "shell",
+          "label": "Build", 
+         "command": "make",
+          "options": 
+          {
+              "cwd": "${workspaceFolder}"
+          },
+          "problemMatcher": 
+          [
+              "$gcc"
+          ],
+          "group":
+           {
+              "kind": "build",
+              "isDefault": true
+          }
+      },
+      {
+          "type": "shell",
+          "label": "Clean",
+          "command": "make  clean",
+          "options": 
+          {
+              "cwd": "${workspaceFolder}"
+          },
+          "group": "build"
+      },
+      {
+        "type": "shell",
+        "label": "Build LibFT",
+        "command": "make",
+        "options": 
+        {
+            "cwd": "${workspaceFolder}/libraries/libft/"
+        },
+        "group": "build"
+    },
+    {
+        "type": "shell",
+        "label": "Clean LibFT",
+        "command": "make clean",
+        "options": 
+        {
+            "cwd": "${workspaceFolder}/libraries/libft/"
+        },
+        "group": "build"
+    }
+  ],
+  "version": "2.0.0"
+}
